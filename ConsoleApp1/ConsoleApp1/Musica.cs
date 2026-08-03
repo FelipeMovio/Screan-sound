@@ -1,23 +1,27 @@
 ﻿class Musica
 {
-    public String nome{ get; set; }
-    public String artista{ get; set; }
-    public int duracao{ get; set; }
-    public bool disponivel { get; set; }
+    public String Nome{ get; set; }
+    public String Artista{ get; set; }
+    public int Duracao{ get; set; }
+    public bool Disponivel { get; set; }
+
+    public string DescricaoResumida =>
+          $"A musica {Nome} do artista {Artista}";
 
 
     public void exibirFichaTecnica()
     {
-        Console.WriteLine("Nome: " + nome);
-        Console.WriteLine("Artista: " + artista);
-        Console.WriteLine("Duração: " + duracao + " segundos");
-        if (disponivel){
+        Console.WriteLine("Nome: " + Nome);
+        Console.WriteLine("Artista: " + Artista);
+        Console.WriteLine("Duração: " + Duracao + " segundos");
+        if (Disponivel){
             Console.WriteLine("Disponível: Sim");
         }
         else {
             Console.WriteLine("Disponível: Não");
         }
     }
+
 
 
 }
