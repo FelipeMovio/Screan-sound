@@ -1,14 +1,23 @@
 ﻿class Musica
 {
-    public String Nome{ get; set; }
-    public String Artista{ get; set; }
-    public int Duracao{ get; set; }
-    public bool Disponivel { get; set; }
+    private string Nome { get; set; }
+    private Banda Artista { get; }
+    public int Duracao { get; set; }
+    private bool Disponivel { get; set; }
 
     public Genero Genero { get; set; }
 
     public string DescricaoResumida =>
           $"A musica {Nome} do artista {Artista}";
+
+
+    public Musica(string nome, Banda artista, int duracao, bool disponivel)
+    {
+        Nome = nome;
+        Artista = artista;
+        Duracao = duracao;
+        Disponivel = disponivel;
+    }
 
 
     public void exibirFichaTecnica()
